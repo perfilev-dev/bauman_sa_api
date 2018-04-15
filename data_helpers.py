@@ -58,7 +58,7 @@ def load_data_and_labels_2():
     Loads MR polarity data from files, splits the data into words and generates labels.
     Returns split sentences and labels.
     """
-    df = pd.read_csv("/Users/perfilev/Developer/diploma/classifier/data/bauman_corpus.csv", delimiter=" ", quotechar="|")
+    df = pd.read_csv("data/bauman_corpus.csv", delimiter=" ", quotechar="|")
     df = df.loc[df["tweet"].drop_duplicates().index]
     ndf = df[df["mark"] == -1].head(600)
     #ndf = ndf.append(df[df["mark"] == 0].head(600))
